@@ -42,13 +42,11 @@ except URLError as e:
 
 #streamlit.text(fruityvice_response.json()) just writes the data to the screen
 
-# take the json version of the response and normalize it
 
-#output it to the screen as a table
 
 
 streamlit.header("The fruit load list contains:")
-def get_fruit_load_list();
+def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
       my_cur.execute("select * from fruit_load_list")
       return my_cur.fetchall()
